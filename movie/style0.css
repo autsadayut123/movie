@@ -1,0 +1,9 @@
+.login{
+    padding: 25px;
+    width: 350px;
+    margin-left: auto;
+    background: aquamarine;
+    text-align: center;
+    position: relative;
+    transition: all ease-in-out .2s;
+}
