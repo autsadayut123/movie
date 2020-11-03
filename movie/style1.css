@@ -1,112 +1,40 @@
-body{
+body,html{
     margin: 0;
     padding: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background: linear-gradient(120deg,#2980b9,#8e44ad);
-    height: 100vh;
-    overflow: hidden;
-}
-/*ตรงกลาง*/
-.center{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 400px;
-    background: wheat;
-    border-radius: 10px;
+    height: 10%;
+    background: #603abc !important;
 }
 
-
-.center h1{
-    text-align: center;
-    padding: 0 0 20px 0;
-    border-bottom: 1px solid black;
-}
-.center form{
-    padding: 0 40px;
-    box-sizing: border-box;
-}
-form .text{
+.user_card{
+    height: 120px;
+    width: 300px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background: #f39c12;
     position: relative;
-    border-bottom: 2px solid darkgray;
-    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 5px;
 }
-.text input{
-    width: 100%;
-    padding: 0 10px;
-    height: 40px;
-    font-size: 16px;
-    border: none;
-    background: none;
-    outline: none;
-}
-.text label{
+.brand_logo_container{
     position: absolute;
-    top: 1%;
-    left: 5px;
-    color: black;
-    transform: translateY(-50%);
-    font-size: 16px;
-    pointer-events: none;
-   transition: .5s;
-}
-.text span::before{
-    content: '';
-    position: absolute;
-    top: 40px;
-    left: 2;
-    width: 0%;
-    height: 2px;
-    background: #2980b9;
-    transition: .5s;
-
-} 
-.text input:focus ~ label,
-.text input:valid ~ label{
-    top: -5px;
-    color: #2980b9;
-}
-.text input:focus ~ span::before,
-.text input:valid ~ span::before{
-    width: 100%;
-}
-.pass{
-    margin: -5px 0 20px 5px;
-    color: black;
-    cursor: pointer;
-}
-.pass:hover{
-    text-decoration: underline;
-}
-input[type="submit"]{
-    width: 100%;
-    height: 50px;
-    border: 1px solid;
-    background: #8e44ad;
-    border-radius: 30px;
-    font-size: 18px;
-    color: aliceblue;
-    font-weight: 700;
-    cursor: pointer;
-    outline: none;
-
-}
-input[type="submit"]:hover{
-    border-color: black;
-    transition: .5s;
-}
-.signup{
-    margin: 30px 0;
+    height: 170px;
+    width: 170px;
+    top: -75px;
+    border-radius: 50%;
+    background: #603abc;
+    padding: 10px;
     text-align: center;
-    font-size: 16px;
-    color: black;
+
 }
-.signup a{
-    color: #8e44ad;
-    text-decoration: none;
-}
-.signup a:hover{
-    text-decoration: underline;
-    transition: .5s;
+.brand_logo{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid white;
 }

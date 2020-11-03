@@ -1,60 +1,88 @@
-body{
+* {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-    background: burlywood;
 }
 
-.box h1{
-    color: aliceblue;
-    text-transform: uppercase;
-    font-weight: 500;
+body {
+    font-size: 120%;
+    background: #f8f8f8;
 }
 
-.box{
-    width: 300px;
-    padding: 40px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background: rgb(7, 7, 8);
+.header {
+    width: 30%;
+    margin: 50px auto 0px;
+    color: white;
+    background: #5f9ea0;
     text-align: center;
+    border: 1px solid #b0c4de;
+    border-bottom: none;
+    border-radius: 10px 10px 0px 0px;
+    padding: 20px;
 }
-.box input[type = "text"],.box input[type = "password"]{
-    border: 0;
-    background: none;
+
+form, .content {
+    width: 30%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #b0c4de;
+    background: white;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.homeheader {
+    text-align: center;
+    font-size: 5rem;
+}
+
+.homecontent {
+    text-align: center;
+    padding-top: 3rem;
+    width: 100%;
+    background: #ccc;
+    height: 100vh;
+}
+
+.input-group {
+    margin: 10px 0px 10px 0px;
+}
+
+.input-group label {
     display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid #3498db;
-    padding:  14px 10px;
-    width: 200px;
-    outline: none;
-    color: aliceblue;
-    border-radius: 24px;
-    transition: 0.25s;
+    text-align: left;
+    margin: 3px;
 }
-.box input[type = "text"]:focus,.box input[type = "password"]:focus{
-   width: 280px; 
-   border-color: wheat;
-}
- .box input[type ="submit"]{
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid wheat;
-    padding:  14px 40px;
-    width: 200px;
-    outline: none;
-    color: aliceblue;
-    border-radius: 24px;
-    transition: 0.25s;
-    cursor: pointer;
- }
- .box input[type ="submit"]:hover{
-    background:brown;
- }
 
+.input-group input {
+    height: 30px;
+    width: 93%;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.btn {
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    background: #5f9ea0;
+    border: none;
+    border-radius: 5px;
+}
+
+.error {
+    width: 92%;
+    margin: 0px auto;
+    padding: 10px;
+    border: 1px solid #a94442;
+    color: #a94442;
+    background: #f2dede;
+    border-radius: 5px;
+    text-align: left;
+}
+.success {
+    color: #3c763d;
+    background: #dff9d8;
+    border: 1px solid #3c763d;
+    margin-bottom: 20px;
+}

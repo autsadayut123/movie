@@ -7,12 +7,12 @@ if(!$id){
 }
 $list = @$_GET['list'];
 if(!$list){
-    $query = mysqli_query($con,"SELECT * FROM data_movie WHERE id= $id");
+    $query = mysqli_query($con,"SELECT * FROM data_movie2 WHERE id= $id");
     $result = mysqli_fetch_array($query);
 }else{
-    $query = mysqli_query($con,"SELECT * FROM data_list WHERE main_id= $id and part = $list");
+    $query = mysqli_query($con,"SELECT * FROM data_list2 WHERE main_id= $id and part = $list");
     $result = mysqli_fetch_array($query);
-    $num_list = mysqli_num_rows(mysqli_query($con,"SELECT * FROM data_list WHERE main_id= $id "));
+    $num_list = mysqli_num_rows(mysqli_query($con,"SELECT * FROM data_list2 WHERE main_id= $id "));
    
 }
 
@@ -114,13 +114,13 @@ if(!$list){
 
 
             <div class="col-md-4">
-            <a class="btn mb-4 shadow-sm text-center <?php if($list <= 1){echo "disabled"; } ?>"style ="background-color: #FF3333; padding:5px; width:100%;" href="play.php?id=<?=$id?>&list=<?=$list-1?>"><h5 style="margin: 0">ตอนก่อนหน้า</h5></a>       
+            <a class="btn mb-4 shadow-sm text-center <?php if($list <= 1){echo "disabled"; } ?>"style ="background-color: #FF3333; padding:5px; width:100%;" href="play1.php?id=<?=$id?>&list=<?=$list-1?>"><h5 style="margin: 0">ตอนก่อนหน้า</h5></a>       
             </div>
             <div class="col-md-4">
-            <a class="btn mb-4 shadow-sm text-center"style ="background-color: #FF3333; padding:5px; width:100%;" href="./list.php?id=<?=$id?>"><h5 style="margin: 0">ดูตอนอื่นๆ</h5></a>       
+            <a class="btn mb-4 shadow-sm text-center"style ="background-color: #FF3333; padding:5px; width:100%;" href="./list1.php?id=<?=$id?>"><h5 style="margin: 0">ดูตอนอื่นๆ</h5></a>       
             </div>
             <div class="col-md-4">
-            <a class="btn mb-4 shadow-sm text-center <?php if($list >= $num_list){echo "disabled"; } ?>"style ="background-color: #FF3333; padding:5px; width:100%;" href="play.php?id=<?=$id?>&list=<?=$list+1?>"><h5 style="margin: 0">ตอนถัดไป</h5></a>       
+            <a class="btn mb-4 shadow-sm text-center <?php if($list >= $num_list){echo "disabled"; } ?>"style ="background-color: #FF3333; padding:5px; width:100%;" href="play1.php?id=<?=$id?>&list=<?=$list+1?>"><h5 style="margin: 0">ตอนถัดไป</h5></a>       
             </div>
         </div>
      

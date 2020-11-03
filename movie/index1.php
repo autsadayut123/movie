@@ -1,12 +1,6 @@
-
 <?php
-session_start();
-if(isset($_SESSION['userlogig'])){
-    header("location: index.php");
-}
-
 include('connect.php');
-$num_rows = mysqli_num_rows(mysqli_query($con, "SELECT * FROM data_movie"));
+$num_rows = mysqli_num_rows(mysqli_query($con, "SELECT * FROM data_movie2"));
 $limit_page = 8;
 if (isset($_GET['page'])) {
   $page = $_GET['page'];
@@ -20,13 +14,14 @@ if(!($num_page ==(int)$num_page))
   if($page > $num_page)
     $page = $num_page;
 $limit_start = ($page*$limit_page)-$limit_page
+
+
 ?>
 <html>
 <head>
 <title>Movie</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 <link rel="stylesheet" href="style0.css">
-<link rel="stylesheet" href= "node_modules\bootstrap\dist\css\bootstrap.min.css">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -50,14 +45,10 @@ $limit_start = ($page*$limit_page)-$limit_page
           <li class="nav-item">
             <a class="nav-link" href="#"></a>
           </li>
-        <form class="form-inline my-2 my-lg-0">
-          <a class="btn btn-outline-success my-2 my-sm-0" type="submit" href="login1.php">เข้าสู่ระบบ</a>
-
-        </form>
       </div>
     </nav>
     <!----------------------------------------->
-  
+
 
 
 
@@ -72,13 +63,13 @@ $limit_start = ($page*$limit_page)-$limit_page
       </nav>  
       <div class="row" > 
       <?php    
-      $query = mysqli_query($con,"SELECT * FROM data_movie ORDER BY id DESC LIMIT $limit_start,$limit_page");
+      $query = mysqli_query($con,"SELECT * FROM data_movie2 ORDER BY id DESC LIMIT $limit_start,$limit_page");
       while($result = mysqli_fetch_array($query)){
       ?>
       <!--เชคหนังหรือซีรี่-->
         <div class="col-md-3" >
           <div class="card mb-4 shadow-sm" style= "background-color:lightgreen">
-          <a href="<?php if($result['status_list'] == 'YES'){?>list<?php }else{?>play<?php }?>.php?id=<?=$result['id']?>">
+          <a href="<?php if($result['status_list'] == 'YES'){?>list1<?php }else{?>play<?php }?>.php?id=<?=$result['id']?>">
             <img src="<?=$result['img']?>" while=100% height="380" class="card-img-top">
             <div class="card-body">
             <p class="card-text text-center" style="white-space: nowrap; overflow: hidden;text-overflow: ellipsis;"><?=$result['name']?></p>
